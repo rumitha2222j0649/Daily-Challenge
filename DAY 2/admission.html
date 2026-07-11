@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>University Admission Portal</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #141e30,
+        #243b55
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+
+
+/* Main Container */
+
+.container{
+
+    width:1000px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.35);
+
+}
+
+
+
+/* Top Header */
+
+.header{
+
+    background:
+    linear-gradient(
+        135deg,
+        #1f2937,
+        #374151
+    );
+
+    color:white;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+
+
+.header h1{
+
+    font-size:38px;
+
+    letter-spacing:1px;
+
+}
+
+
+
+.header p{
+
+    margin-top:10px;
+
+    color:#d1d5db;
+
+    font-size:17px;
+
+}
+
+
+
+/* Form Area */
+
+.form-section{
+
+    padding:40px;
+
+}
+
+
+
+/* Section Titles */
+
+.section-title{
+
+    color:#1f2937;
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+    margin-top:25px;
+
+    padding-bottom:8px;
+
+    border-bottom:2px solid #e5e7eb;
+
+}
+
+
+
+/* Row */
+
+.row{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+
+
+.input-box{
+
+    width:100%;
+
+    margin-bottom:20px;
+
+}
+
+
+
+label{
+
+    display:block;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#374151;
+
+    margin-bottom:8px;
+
+}
+
+
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:0.3s;
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:
+    0 0 8px rgba(37,99,235,0.3);
+
+}
+
+
+
+textarea{
+
+    height:100px;
+
+    resize:none;
+
+}
+
+
+
+/* Gender */
+
+
+.gender{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+
+.gender label{
+
+    font-weight:500;
+
+}
+
+
+
+
+/* Upload */
+
+
+input[type="file"]{
+
+    background:#f9fafb;
+
+    padding:10px;
+
+}
+
+
+
+
+/* Button */
+
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:25px;
+
+    border:none;
+
+    border-radius:12px;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+
+    transition:0.3s;
+
+}
+
+
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 20px rgba(37,99,235,0.3);
+
+}
+
+
+
+/* Footer */
+
+
+.footer{
+
+    text-align:center;
+
+    padding:15px;
+
+    background:#f3f4f6;
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+/* Responsive */
+
+
+@media(max-width:700px){
+
+.row{
+
+    flex-direction:column;
+
+}
+
+
+.form-section{
+
+    padding:25px;
+
+}
+
+
+.header h1{
+
+    font-size:28px;
+
+}
+
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="container">
+
+
+
+<div class="header">
+
+<h1>🎓 University Admission Portal</h1>
+
+<p>Application Form For Future Scholars</p>
+
+</div>
+
+
+
+<div class="form-section">
+
+
+<form>
+
+
+
+<h2 class="section-title">
+Personal Information
+</h2>
+
+
+
+<div class="row">
+
+
+<div class="input-box">
+
+<label>Student Name</label>
+
+<input type="text" placeholder="Enter full name">
+
+</div>
+
+
+
+<div class="input-box">
+
+<label>Date of Birth</label>
+
+<input type="date">
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="row">
+
+
+<div class="input-box">
+
+<label>Email Address</label>
+
+<input type="email" placeholder="Enter email">
+
+</div>
+
+
+
+<div class="input-box">
+
+<label>Phone Number</label>
+
+<input type="number" placeholder="Enter phone number">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="input-box">
+
+<label>Gender</label>
+
+
+<div class="gender">
+
+<label>
+<input type="radio" name="gender">
+ Male
+</label>
+
+
+<label>
+<input type="radio" name="gender">
+ Female
+</label>
+
+
+<label>
+<input type="radio" name="gender">
+ Other
+</label>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<h2 class="section-title">
+Academic Information
+</h2>
+
+
+
+
+<div class="row">
+
+
+<div class="input-box">
+
+<label>Select Course</label>
+
+
+<select>
+
+<option>Select Course</option>
+
+<option>MCA</option>
+
+<option>MBA</option>
+
+<option>BCA</option>
+
+<option>B.Tech</option>
+
+</select>
+
+
+</div>
+
+
+
+
+
+<div class="input-box">
+
+
+<label>Qualification</label>
+
+
+<select>
+
+<option>Select Qualification</option>
+
+<option>Diploma</option>
+
+<option>UG Degree</option>
+
+<option>PG Degree</option>
+
+
+</select>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<h2 class="section-title">
+Contact Information
+</h2>
+
+
+
+<div class="input-box">
+
+
+<label>Address</label>
+
+
+<textarea placeholder="Enter your address"></textarea>
+
+
+</div>
+
+
+
+
+<div class="row">
+
+
+<div class="input-box">
+
+<label>City</label>
+
+<input type="text" placeholder="Enter city">
+
+</div>
+
+
+
+
+<div class="input-box">
+
+<label>Pincode</label>
+
+<input type="number" placeholder="Enter pincode">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<h2 class="section-title">
+Documents
+</h2>
+
+
+
+<div class="input-box">
+
+
+<label>Upload Photo</label>
+
+
+<input type="file">
+
+
+</div>
+
+
+
+
+<button>
+
+Submit Application
+
+</button>
+
+
+
+</form>
+
+
+
+</div>
+
+
+
+<div class="footer">
+
+© 2026 University Admission Portal | Designed with HTML & CSS
+
+</div>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>

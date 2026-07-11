@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Destination Card</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#66d9ff,#c9f3ff,#ffffff);
+}
+
+/* Card */
+
+.card{
+    width:380px;
+    background:rgba(255,255,255,.28);
+    backdrop-filter:blur(18px);
+    border:2px solid rgba(255,255,255,.5);
+    border-radius:30px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+    transition:.5s;
+    margin:20px;
+}
+
+.card:hover{
+    transform:translateY(-15px);
+    box-shadow:0 25px 50px rgba(0,0,0,.35);
+}
+
+/* Ribbon */
+
+.card::before{
+
+content:"TOP PICK";
+
+position:absolute;
+
+top:20px;
+
+left:-45px;
+
+padding:10px 55px;
+
+background:linear-gradient(45deg,#ff6b6b,#ff9f43);
+
+color:white;
+
+font-weight:bold;
+
+font-size:12px;
+
+transform:rotate(-45deg);
+
+z-index:5;
+
+}
+
+/* Heart */
+
+.heart{
+
+position:absolute;
+
+top:18px;
+
+right:18px;
+
+width:48px;
+
+height:48px;
+
+background:rgba(255,255,255,.8);
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:22px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.heart:hover{
+
+background:#ff4d6d;
+
+color:white;
+
+}
+
+/* Image */
+
+.card img{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+border-bottom-left-radius:30px;
+
+border-bottom-right-radius:30px;
+
+}
+
+/* Logo */
+
+.logo{
+
+width:75px;
+
+height:75px;
+
+border-radius:50%;
+
+background:white;
+
+margin:-38px auto 0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:35px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+position:relative;
+
+}
+
+/* Content */
+
+.content{
+
+padding:25px;
+
+text-align:center;
+
+}
+
+.content h1{
+
+font-size:48px;
+
+background:linear-gradient(to right,#008cff,#9b5cff,#ff4d94);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+margin-bottom:10px;
+
+}
+
+.location{
+
+color:#555;
+
+margin-bottom:20px;
+
+font-size:17px;
+
+}
+
+.content p{
+
+color:#444;
+
+line-height:1.7;
+
+text-align:justify;
+
+margin-bottom:25px;
+
+}
+
+/* Features */
+
+.features{
+
+display:flex;
+
+justify-content:space-between;
+
+gap:12px;
+
+margin-bottom:30px;
+
+}
+
+.box{
+
+flex:1;
+
+background:white;
+
+padding:15px;
+
+border-radius:18px;
+
+box-shadow:0 8px 15px rgba(0,0,0,.1);
+
+transition:.3s;
+
+}
+
+.box:hover{
+
+transform:translateY(-8px);
+
+}
+
+.box span{
+
+font-size:30px;
+
+display:block;
+
+margin-bottom:8px;
+
+}
+
+.box p{
+
+font-size:13px;
+
+text-align:center;
+
+}
+
+/* Button */
+
+button{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:40px;
+
+font-size:18px;
+
+background:linear-gradient(90deg,#0072ff,#8e2de2,#ff4d94);
+
+color:white;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+button:hover{
+
+letter-spacing:2px;
+
+transform:scale(1.03);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="heart">♡</div>
+
+<img src="maldivis.jpg" alt="Maldives">
+
+<div class="logo">🏝️</div>
+
+<div class="content">
+
+<h1>Maldives</h1>
+
+<div class="location">
+📍 Indian Ocean &nbsp;&nbsp;|&nbsp;&nbsp; ☀ 25°C - 30°C
+</div>
+
+<p>
+Escape to the Maldives, where crystal-clear lagoons,
+luxurious overwater villas, coral reefs, and breathtaking
+sunsets create an unforgettable tropical paradise for every traveler.
+</p>
+
+<div class="features">
+
+<div class="box">
+<span>🤿</span>
+<p>Snorkeling</p>
+</div>
+
+<div class="box">
+<span>🏨</span>
+<p>Luxury Resort</p>
+</div>
+
+<div class="box">
+<span>🍽️</span>
+<p>Fine Dining</p>
+</div>
+
+</div>
+
+<button>✈ Plan Your Trip →</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
