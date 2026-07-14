@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Cards</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:lightblue;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    width:250px;
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    transition:0.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.3);
+}
+
+.card::before{
+    content:"SALE";
+    position:absolute;
+    top:10px;
+    left:-35px;
+    background:red;
+    color:white;
+    padding:5px 40px;
+    transform:rotate(-45deg);
+    font-size:12px;
+    font-weight:bold;
+}
+
+.image{
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.image img{
+    width:100%;
+    height:180px;
+    transition:0.4s;
+}
+
+.image img:hover{
+    transform:scale(1.1);
+}
+
+h2{
+    margin:15px 0 10px;
+}
+
+.price{
+    color:green;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.discount{
+    display:inline-block;
+    margin:10px;
+    background:orange;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+button{
+    background:#007BFF;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0056b3;
+    transform:scale(1.05);
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>Product Cards</h1>
+
+<div class="container">
+
+<div class="card">
+<div class="image">
+<img src="shoes.jpg" alt="Shoes">
+</div>
+<h2>Sports Shoes</h2>
+<p class="price">₹1,999</p>
+<span class="discount">20% OFF</span><br>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<div class="image">
+<img src="watch.jpg" alt="Watch">
+</div>
+<h2>Smart Watch</h2>
+<p class="price">₹2,499</p>
+<span class="discount">25% OFF</span><br>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<div class="image">
+<img src="head.jpg" alt="Headphones">
+</div>
+<h2>Headphones</h2>
+<p class="price">₹1,299</p>
+<span class="discount">15% OFF</span><br>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<div class="image">
+<img src="bag.jpg" alt="Bag">
+</div>
+<h2>Backpack</h2>
+<p class="price">₹999</p>
+<span class="discount">30% OFF</span><br>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<div class="image">
+<img src="phone.jpg" alt="Phone">
+</div>
+<h2>Smart Phone</h2>
+<p class="price">₹15,999</p>
+<span class="discount">10% OFF</span><br>
+<button>Buy Now</button>
+</div>
+
+<div class="card">
+<div class="image">
+<img src="laptop.jpg" alt="Laptop">
+</div>
+<h2>Laptop</h2>
+<p class="price">₹45,999</p>
+<span class="discount">18% OFF</span><br>
+<button>Buy Now</button>
+</div>
+
+</div>
+
+</body>
+</html>

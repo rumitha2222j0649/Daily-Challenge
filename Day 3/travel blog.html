@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Blog</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+
+/* Navigation Bar */
+
+nav{
+    background:#2c3e50;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-family:Georgia,serif;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:yellow;
+}
+
+/* Hero Section */
+
+.hero{
+    background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover;
+    height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+}
+
+.hero-content{
+    position:relative;
+    z-index:1;
+}
+
+.hero h1{
+    font-size:55px;
+    font-family:Georgia,serif;
+}
+
+.hero p{
+    font-size:22px;
+    margin:20px 0;
+}
+
+.hero button{
+    padding:12px 30px;
+    border:none;
+    background:orange;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:red;
+}
+
+/* Sections */
+
+section{
+    padding:50px;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:35px;
+    font-family:Georgia,serif;
+}
+
+/* Cards */
+
+.container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 12px rgba(0,0,0,0.2);
+    transition:0.3s;
+    position:relative;
+}
+
+.card::before{
+    content:"Popular";
+    position:absolute;
+    background:red;
+    color:white;
+    padding:5px 12px;
+    top:10px;
+    left:10px;
+    border-radius:5px;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    transition:0.4s;
+}
+
+.card img:hover{
+    transform:scale(1.08);
+}
+
+.card h3{
+    margin:15px;
+}
+
+.card p{
+    margin:15px;
+}
+
+.card button{
+    margin:15px;
+    padding:10px 20px;
+    border:none;
+    background:#3498db;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card button:hover{
+    background:#2c3e50;
+}
+
+/* Gallery */
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.gallery img{
+    width:300px;
+    height:200px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+    background:#2c3e50;
+    color:white;
+    padding:40px;
+}
+
+.contact h2{
+    color:white;
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+
+<div class="logo">Travel Blog</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#destination">Destinations</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- Hero Section -->
+
+<div class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Explore The World</h1>
+
+<p>Discover Amazing Travel Destinations</p>
+
+<button>Explore Now</button>
+
+</div>
+
+</div>
+
+<!-- Destination Section -->
+
+<section id="destination">
+
+<h2>Featured Destinations</h2>
+
+<div class="container">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+
+<h3>Ooty</h3>
+
+<p>Enjoy beautiful hills, gardens and pleasant weather.</p>
+
+<button>Read More</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+
+<h3>Goa</h3>
+
+<p>Experience beaches, nightlife and delicious seafood.</p>
+
+<button>Read More</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+
+<h3>Munnar</h3>
+
+<p>Enjoy tea plantations, waterfalls and green valleys.</p>
+
+<button>Read More</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Gallery -->
+
+<section id="gallery">
+
+<h2>Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<div class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>Email : travelblog@gmail.com</p>
+
+<p>Phone : +91 9876543210</p>
+
+<p>Address : Coimbatore, Tamil Nadu</p>
+
+</div>
+
+</body>
+</html>
